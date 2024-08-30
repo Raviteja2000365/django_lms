@@ -1,0 +1,17 @@
+
+
+{% extends "bse.html" %}
+
+{% block body %}
+    <div id="page">
+        <h>PRESENT Announcements</h1>
+    <ul>
+        {% for list in assignments %}
+            <li>{{ list.assignment_name }}</li>
+            <p>{{list.date}}</p>
+        {% endfor %}
+
+        
+    </ul>
+    </div>
+{% endblock %}

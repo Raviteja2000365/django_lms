@@ -1,0 +1,23 @@
+{% extends "bse.html" %}
+
+
+
+
+{% block body %}
+    <div id="page">
+    <div class="container mt-5">
+        <h2 class="text-center">Assignments</h2>
+        <div class="list-group">
+            {% for assignment in assignments %}
+                <div class="list-group-item">
+                    <h5>{{ assignment.assignment_name }}</h5>
+                    <p>Due Date: {{ assignment.date }}</p>
+                </div>
+                {% if not forloop.last %}
+                    <div class="assignment-divider"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endblock %}

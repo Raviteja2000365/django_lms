@@ -1,0 +1,13 @@
+{% extends "bse.html" %}
+
+{% block body %}
+    <div id="page">
+        <h1>Available Courses</h1>
+    <ul>
+        {% for list in courses %}
+            <li>{{ list.course_name }}</li>
+            <p>{{list.date}}</p>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
